@@ -1,0 +1,10 @@
+body, body *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cart{
+    width: 50%;
+    height: 50vh;
+    text-align: center;
+}
