@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .buttonall {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .modal1,.modal2,.modal3 {
+        border: 1px solid;
+        border-radius: 45px;
+        width: 160px;
+        height: 60px;
+        margin-top: 60px;
+      }
+      .one {
+        width: 60%;
+        display: flex;
+        border: 1px solid;
+        margin-top: 60px;
+        
+      }
+      .two {
+        color: blue;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .hidden{
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="buttonall">
+      <button class="modal1">Show modal 1</button>
+      <button class="modal2">Show modal 2</button>
+      <button class="modal3">Show modal 3</button>
+    </div>
+    <div style="display: flex; justify-content: center;">
+
+        <div class="one hidden">
+            <div>
+                <img
+                src="data:image/jpeg;base64,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"
+                alt=""
+                height="300px"
+        />
+      </div>
+      <div class="card">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam
+          tenetur id neque odio pariatur autem! Sint consequuntur dolore
+          reiciendis. Odit nam officia laboriosam voluptatem beatae omnis
+          eveniet quasi natus corporis.
+        </p>
+        <p class="two">Sarah Parker</p>
+        <p>Software Engineer,Google</p>
+    </div>
+
+      <div><button>X</button></div>
+    </div>
+</div>
+<script>
+    const users=[
+        {
+            id:1,
+            name:'Asgar',
+            surname:'Asgarov',
+            image:'',
+            description:'',
+            work:{
+                name:'Engineer',
+                company:'Nasa',
+
+            }
+            
+        }
+    ]
+    const buttons=document.getElementsByClassName("")
+    const modal=document.querySelector(".modal")
+    const card=document.querySelector(".card")
+    
+   
+</script>
+</body>
+</html>
