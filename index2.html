@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List 2023</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction:column ;
+            min-height: 100vh;
+            background-color:black;
+            color:white;
+            
+        }
+        header{
+            padding: 32px 16px;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        header h1{
+            font-size: 40px;
+            font-weight: 300;
+            color: gray;
+            margin-bottom: 16px;
+        }
+        #new-task-form{
+            display: flex;
+        }
+        input,button{
+            background-color: none;
+            outline: none;
+             border:none;
+             appearance: none;
+
+        }
+        #new-task-input{
+            flex: 1 1 0%;
+            background-color: var(--darker);
+            padding: 16px;
+            border-radius: 16px;
+            margin-right: 16px;
+            color:lightyellow ;
+            font-size: 20px;
+        }
+        #new-task-input::placeholder{
+            color: gray;
+        }
+        #new-task-submit{
+            color: pink;
+            font-size: 20px;
+            font-weight: 700;
+            background-image: linear-gradient(to right,pink,purple);
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        #new-task-submit:hover{
+            opacity: 0.8;
+        }
+        #new-task-submit:active{
+            opacity: 0.6;
+        }
+        main{
+            flex: 1 1 0%;
+            padding: 32px 16px;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+
+        }
+        .task-list{
+            padding: 16px;
+        }
+        .task-list h2{
+            font-size: 16px;
+            font-weight: 300;
+            color: gray;
+            margin-bottom: 16px;
+        }
+        #tasks .task{
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            padding: 16px;
+            border-radius: 16px;
+            margin-bottom: 16px;
+        }
+
+        #tasks .task .content .text{
+            color: lightyellow;
+            font-size: 20px;
+            width: 100%;
+            display: block;
+            transition: 0.4s;
+        }
+        #tasks .task .content .text:not(:read-only){
+color: pink;
+        }
+        #tasks .task .actions{
+            display: flex;
+            margin:0
+        }
+        .task .actions button{
+            cursor: pointer;
+            margin: 0;
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transform-origin: 0.4s;
+        }
+        .task.actions button:hover{
+            opacity: 0.8;
+        }
+        .task.actions button:active{
+            opacity:0.6
+        }
+        .task .action .edit{
+            background-image: linear-gradient(to right,pink,purple);
+            
+        }
+        .task .action .delete{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Task List 2023</h1>
+        <form action="new-task-from">
+            <input type="text" name="" id="new-task-input" placeholder="What do you have planned?" />
+            <input type="submit"
+            id="new-task-submit"
+            value="Add task" />
+
+        </form>
+    <header>
+<main>
+<section class="task-list">
+<h2>Tasks</h2>
+<div id="tasks">
+
+    <div class="task">
+        <div class="content">
+            <input type="text"
+            class=""
+            value="My shiny task"
+            readonly>
+
+        </div>
+        <div class="actions">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+        </div>
+    </div>
+</div>
+
+
+</section>
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+    </header>
+</body>
+</html>
